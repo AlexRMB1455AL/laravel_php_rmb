@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('content');
-            $table->unsignedBigInteger('likes')->nullable(0);
-            $table->boolean('is_published')->default(false);
-            $table->
+//            $table->text('content');
+//            $table->unsignedBigInteger('likes')->default(0);
+//            $table->boolean('is_published')->default(false);
+//            $table->
             $table->timestamps();
         });
     }
