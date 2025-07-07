@@ -11,6 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('posts');
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
@@ -20,19 +28,6 @@ return new class extends Migration
             $table->string('author')->nullable();
             $table->timestamps();
             $table->string('uber')->nullable();
-//            $table->string('created_at')->nullable();
-//            $table->string('updated_at')->nullable();
-
-            $table->softDeletes();
         });
-    }
-//php artisan migrate
-//php artisan migrate:rollback
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('posts');
     }
 };

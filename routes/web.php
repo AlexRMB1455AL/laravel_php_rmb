@@ -38,3 +38,16 @@ Route::get('boost/basket/ball/basketball', function () {
 //Route::get('/about', [MyPlaceController::class, 'index']);
 Route::get('/posts', PostController::class . '@index');
 
+//добавление данных в базу данных
+Route::get('posts/create', PostController::class . '@create');
+
+//методы обновления данных
+Route::get('posts/update', PostController::class . '@update');
+
+//удаление данных из базы данных
+Route::get('posts/delete', PostController::class . '@delete');
+
+Route::get('posts/first_or_create', PostController::class . '@firstOrCreate');
+Route::get('posts/update_or_create', PostController::class . '@updateOrCreate');
+
+
