@@ -15,11 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->unsignedBigInteger('likes')->default(0);
-            $table->boolean('is_published')->default(false);
+            $table->unsignedBigInteger('likes')->default(1);
+            $table->boolean('is_published')->default(true);
             $table->string('author')->nullable();
             $table->timestamps();
             $table->string('uber')->nullable();
+            $table->string('created_at')->nullable();
+            $table->string('updated_at')->nullable();
+
+
         });
     }
 //php artisan migrate

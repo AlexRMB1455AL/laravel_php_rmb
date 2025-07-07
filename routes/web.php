@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\MyPlaceController;
+//use App\Http\Controllers\MyPlaceController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,7 +10,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/about', function () {
+Route::get('/posts', function () {
     return 'this is my page';
 });
 Route::get('/contact', function () {
@@ -34,5 +35,6 @@ Route::get('boost/basket/ball/basketball', function () {
     return 'this is my boost page';
 });
 //Route::get('/home_al', 'MyPlaceController@index');
-Route::get('/home_al', [MyPlaceController::class, 'index']);
+//Route::get('/about', [MyPlaceController::class, 'index']);
+Route::get('/posts', PostController::class . '@index');
 
