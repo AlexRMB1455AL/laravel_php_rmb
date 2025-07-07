@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('author')->nullable();
             $table->timestamps();
             $table->string('uber')->nullable();
-            $table->string('created_at')->nullable();
-            $table->string('updated_at')->nullable();
+//            $table->string('created_at')->nullable();
+//            $table->string('updated_at')->nullable();
 
-
+            $table->softDeletes();
         });
     }
 //php artisan migrate
